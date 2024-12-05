@@ -1,0 +1,34 @@
+{
+    "name": "outils/coquille-vide",
+    "type": "application",
+    "license": "GPL",
+    "require": {
+        "php": "^8.2",
+        "ext-ctype": "*",
+        "ext-curl": "*",
+        "ext-fileinfo": "*",
+        "ext-iconv": "*"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "gitlab-domains": [
+            "gitlab.forge.education.gouv.fr"
+        ],  
+        "allow-plugins": {
+          "symfony/flex": true,
+          "symfony/runtime": true,
+          "endroid/installer": false
+        },
+        "sort-packages": true,
+        "secure-http": false,
+        "optimize-autoloader": true
+      },
+      "repositories": {
+        "reda": {
+            "type": "composer",
+            "url": "https://gitlab.forge.education.gouv.fr/api/v4/group/18427/-/packages/composer/packages.json"
+        }
+    }
+}
